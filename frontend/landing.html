@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStock - Fluid Inventory Management</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using a very elegant geometric font combination -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' },
+                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 400: '#94a3b8', 500: '#64748b', 900: '#0f172a' }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 15s linear infinite',
+                        'spin-reverse-slow': 'spin-reverse 20s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'spin-reverse': {
+                            '0%': { transform: 'rotate(360deg)' },
+                            '100%': { transform: 'rotate(0deg)' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* Ambient noise texture for a premium paper feel */
+        .noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Custom typography styling */
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        /* Fluid masking for images/gradients */
+        .blob-mask {
+            mask-image: radial-gradient(circle, black 40%, transparent 70%);
+            -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body
+    class="text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-primary-500 selection:text-white noise-bg">
+
+    <!-- Conceptual Background Gradients (No boxes, just light) -->
+    <div
+        class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-100 blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div
+        class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-50 blur-[120px] pointer-events-none -z-10">
+    </div>
+
+    <!-- Minimal Navbar -->
+    <nav class="w-full z-50 pt-8 pb-4 absolute top-0">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center">
+                    <i class="ph-bold ph-infinity text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900 uppercase">SmartStock</span>
+            </div>
+
+            <div class="flex items-center">
+                <a href="index.html"
+                    class="group relative px-6 py-2.5 font-bold text-slate-900 flex items-center gap-2 overflow-hidden">
+                    <span class="relative z-10">Enter Platform</span>
+                    <i class="ph-bold ph-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                    <!-- Line animation on hover instead of a button box -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-slate-900 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pure Typographic & Conceptual Hero -->
+    <main class="relative min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left: Massive Typography -->
+            <div class="relative z-10">
+                <h1
+                    class="text-[5rem] lg:text-[7rem] font-extrabold tracking-tighter leading-[0.9] text-slate-900 mb-8">
+                    Flow.<br />
+                    Not<br />
+                    Friction.
+                </h1>
+
+                <p class="text-xl lg:text-2xl text-slate-500 font-light leading-relaxed mb-12 max-w-lg text-balance">
+                    We destroyed the traditional dashboard. Experience raw, borderless inventory control driven entirely
+                    by Node.js and MySQL.
+                </p>
+
+                <div class="flex items-center gap-8">
+                    <a href="index.html"
+                        class="flex items-center gap-4 text-lg font-bold text-primary-600 hover:text-slate-900 transition-colors group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-slate-100 transition-colors">
+                            <i class="ph-fill ph-play text-xl"></i>
+                        </div>
+                        Launch Environment
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Conceptual Data Visualization (Instead of a UI Box) -->
+            <div class="relative h-[500px] w-full flex items-center justify-center blob-mask">
+                <!-- Outer Ring -->
+                <div class="absolute w-[400px] h-[400px] border-[1px] border-slate-200 rounded-full animate-spin-slow">
+                    <div
+                        class="absolute top-0 left-1/2 w-4 h-4 bg-primary-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_20px_rgba(59,130,246,0.8)]">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-1/2 w-2 h-2 bg-indigo-400 rounded-full transform -translate-x-1/2 translate-y-1/2">
+                    </div>
+                </div>
+
+                <!-- Inner Ring -->
+                <div
+                    class="absolute w-[250px] h-[250px] border-[1px] border-slate-300 rounded-full animate-spin-reverse-slow">
+                    <div
+                        class="absolute top-1/2 right-0 w-3 h-3 bg-emerald-400 rounded-full transform translate-x-1/2 -translate-y-1/2 shadow-[0_0_15px_rgba(52,211,153,0.6)]">
+                    </div>
+                </div>
+
+                <!-- Core Element -->
+                <div
+                    class="absolute w-[100px] h-[100px] bg-slate-900 rounded-full flex items-center justify-center animate-float shadow-2xl">
+                    <i class="ph-fill ph-database text-4xl text-white"></i>
+                </div>
+
+                <!-- Connecting Concept Lines -->
+                <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 500 500">
+                    <path d="M250,250 L400,100" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"
+                        class="text-slate-500" />
+                    <path d="M250,250 L100,400" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"
+                        class="text-slate-500" />
+                    <path d="M250,250 L100,100" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"
+                        class="text-slate-500" />
+                </svg>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Editorial Feature Layout (No boxes, cards, or grids) -->
+    <section id="features" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="mb-32">
+                <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 text-balance max-w-4xl">
+                    Designed as a continuous flow of information, completely unboxed.
+                </h2>
+            </div>
+
+            <div class="space-y-40">
+                <!-- Feature 1: Left Aligned -->
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+                    <div class="lg:w-1/2 flex justify-center">
+                        <!-- Abstract icon instead of UI -->
+                        <div class="relative w-64 h-64">
+                            <div class="absolute inset-0 bg-primary-100 rounded-full filter blur-2xl opacity-70"></div>
+                            <div class="relative h-full flex items-center justify-center text-primary-600">
+                                <i class="ph-duotone ph-hard-drives text-[8rem]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <span class="text-primary-600 font-bold uppercase tracking-widest text-sm mb-4 block">01 /
+                            Architecture</span>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Absolute Data Sovereignty.</h3>
+                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                            Your records reside purely on your machine. The frontend establishes a direct, secure line
+                            to your local Node.js server, funneling inventory metrics directly into MySQL. No
+                            third-party clouds, zero latency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Right Aligned -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-32">
+                    <div class="lg:w-1/2 flex justify-center">
+                        <!-- Abstract icon instead of UI -->
+                        <div class="relative w-64 h-64">
+                            <div class="absolute inset-0 bg-emerald-100 rounded-full filter blur-2xl opacity-70"></div>
+                            <div class="relative h-full flex items-center justify-center text-emerald-500">
+                                <i class="ph-duotone ph-pulse text-[8rem]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <span class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-4 block">02 /
+                            Intelligence</span>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Algorithmic Alerting.</h3>
+                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                            The system evaluates stock depletion in real-time. Without cluttering your view with popups,
+                            it elegantly flags critical SKUs the exact moment they breach threshold minimums.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Left Aligned -->
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+                    <div class="lg:w-1/2 flex justify-center">
+                        <!-- Abstract icon instead of UI -->
+                        <div class="relative w-64 h-64">
+                            <div class="absolute inset-0 bg-indigo-100 rounded-full filter blur-2xl opacity-70"></div>
+                            <div class="relative h-full flex items-center justify-center text-indigo-500">
+                                <i class="ph-duotone ph-intersect-three text-[8rem]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <span class="text-indigo-500 font-bold uppercase tracking-widest text-sm mb-4 block">03 /
+                            Analytics</span>
+                        <h3 class="text-4xl font-bold text-slate-900 mb-6">Continuous Valuation.</h3>
+                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                            No reporting generation required. Financial metrics and category distributions are
+                            calculated continuously and projected directly onto your workspace canvas natively via
+                            Chart.js.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Monumental Typography Footer / CTA -->
+    <footer class="pt-32 pb-16 bg-slate-900 text-white selection:bg-white selection:text-slate-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-32">
+                <h2 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none mb-12">
+                    Begin<br />Tracking.
+                </h2>
+                <a href="index.html"
+                    class="inline-flex items-center gap-4 text-2xl font-light border-b-2 border-white pb-2 hover:text-primary-400 hover:border-primary-400 transition-colors">
+                    Access the Workspace <i class="ph-light ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm font-light text-slate-400">
+                <p>&copy; 2024 SmartStock Protocol. All systems nominal.</p>
+                <div class="flex items-center gap-6 mt-4 md:mt-0">
+                    <span class="flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div> Node Server: Port 5000
+                    </span>
+                    <span>Database: MySQL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
