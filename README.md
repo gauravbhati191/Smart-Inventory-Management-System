@@ -94,22 +94,22 @@ cd frontend
 npm install
 npm start
 
-#🔐 Authentication (Optional)
+### 🔐 Authentication (Optional)
 JWT-based authentication (can be added)
 Role-based access (Admin / User)
 
-# 🤝 Contributing
+### 🤝 Contributing
 Contributions are welcome!
 Feel free to fork the repo and submit pull requests.
 
-# 📄 License
+### 📄 License
 This project is open-source and available under the MIT License.
 
-# 👨‍💻 Author
+### 👨‍💻 Author
 Gaurav Bhati
 GitHub: https://github.com/gauravbhati191
 
-# ⭐ If you like this project, give it a star!
+### ⭐ If you like this project, give it a star!
 
 If you want next level 🚀  
 I can:
