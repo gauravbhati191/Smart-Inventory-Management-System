@@ -51,8 +51,8 @@ SmartStock is a modern and intelligent **Inventory Management System** designed 
 ## 🏗️ Tech Stack
 
 ### 🌐 Web (Frontend)
-- React.js
-- Tailwind CSS / Modern UI
+- Html
+- CSS / Modern UI
 
 ### ⚙️ Backend
 - Node.js
@@ -70,7 +70,7 @@ SmartStock is a modern and intelligent **Inventory Management System** designed 
 ## 📂 Project Structure
 Smart-Inventory-Management-System/
 │
-├── frontend/ # React Web Dashboard
+├── frontend/ # Html Web Dashboard
 ├── backend/ # Node.js API Server
 ├── README.md
 
@@ -86,11 +86,6 @@ cd Smart-Inventory-Management-System
 
 ### 2️⃣ Setup Backend
 cd backend
-npm install
-npm start
-
-### 3️⃣ Setup Frontend
-cd frontend
 npm install
 npm start
 
