@@ -1,4 +1,4 @@
-<img width="1884" height="863" alt="image" src="https://github.com/user-attachments/assets/aeed18ea-acfa-46ba-88bf-947cb30aa133" /># 📦 Smart Inventory Management System
+# 📦 Smart Inventory Management System
 
 SmartStock is a modern and intelligent **Inventory Management System** designed to manage products, categories, stock, and sales efficiently across **web and mobile platforms**. It helps businesses track inventory in real-time, automate stock updates, and streamline operations with a clean and user-friendly interface.
 
@@ -116,13 +116,15 @@ I can:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8ed40c57-9c90-42a8-a05a-79a80cd8ba42" width="700"/>
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/2d2378de-3429-455d-9535-2e1fd56f3b8b" width="700"/>
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/89378065-8bff-487b-9b31-3c5a8a23a7f3" width="700"/>
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/5528dee9-485c-4972-8657-8af0ba7ed40e" width="700"/>
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/dc99e3d4-50cd-438f-b388-bd162226534b" width="700"/>
+  <img src="https://github.com/user-attachments/assets/8ed40c57-9c90-42a8-a05a-79a80cd8ba42" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/2d2378de-3429-455d-9535-2e1fd56f3b8b" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/89378065-8bff-487b-9b31-3c5a8a23a7f3" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/5528dee9-485c-4972-8657-8af0ba7ed40e" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dc99e3d4-50cd-438f-b388-bd162226534b" width="45%"/>
 </p>
